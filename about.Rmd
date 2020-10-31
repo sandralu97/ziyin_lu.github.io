@@ -6,4 +6,65 @@ output:
     toc_float: true
 ---
 
-# My Resume
+# Sandra Lu
+
+## Education
+
+**Columbia University, Mailman School of Public Health, New York, U.S.A**
+
+Sep 2019 - May 2021
+
+Master of Public Health in Epidemiology
+
+Certificate in Applied Biostatistics
+
+Relevant coursework:
+Application of Epidemiologic Research Methods with SAS, Analysis of Categorical Data, Applied Regression, Health System, Design & Conduct of Observation Epi, Data Science with R, Intro to RCT
+
+**University of Melbourne, Melbourne, Australia**
+
+Feb 2016 - Dec 2018
+
+Bachelor of Science in Pharmacology
+
+## Academic project
+
+**Cannabis Use Among People with and without Depression and The Factor of Perceived
+Risks**
+
+* Conducted 40+ reviews of literature, designed research plan and research methodology of weighted complex design study based on latest researches and guidelines
+
+* Compiled and cleaned the complex survey data with sample size over 700,000 with various procedures and macros
+
+* Applied advanced statistical techniques with SAS including weighted prevalence, linear time trends, multivariable logistic regression, F-test, etc.
+
+**Investigating the Effect of National Government Physical Distancing Measures Oon Depression and Anxiety During the COVID-19 Pandemic Through Meta-Analysis and Meta-Regression**
+
+* Reviewed and extracted populational depression and anxiety information, nature of population and study type from published/preprint papers in China
+
+
+## Working experience
+
+**IQVIA Solutions Enterprise Management Consulting (Shanghai) CO., Ltd**
+
+_Read-World Solutions PTA_
+
+Sep 2020 – present
+
+* Extracted data for targeted literature review on LA/mUC from 100+ publications according to pre-specified guideline on epidemiology, treatment and humanistic outcome
+
+* Conducted desk research on National Reimbursement Drug List and collected information for price negotiation
+
+* Translated and quality controlled for literature, project report slides and other documents
+
+**Sanofi (China) Co. Ltd, Shanghai, China**
+
+_Clinical Trial Assistant Intern_ 
+
+Mar - May 2019
+
+* Provided support to trial execution (Team Dupilumab); compiled more than 30 adverse effect reports per week in Excel and distributed findings to 50 recipients
+
+* Prepared, coordinated, and processed research lab kits to more than 50 sites as required
+
+* Managed clinical trial contract with more than 50 sites and CRO in eTMF system

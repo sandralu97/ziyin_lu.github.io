@@ -5,10 +5,14 @@ navbar:
   right:
     - text: "About"
       href: about.html
+    - text: "Dashboard"
+      href: dashboard.html
     - icon: fa-envelope fa-lg
       href: mailto:<zl2861@cumc.columbia.edu>
     - icon: fa-github fa-lg
       href: https://github.com/sandralu97
+    - icon: fab fa-linkedin
+      href: https://www.linkedin.com/in/ziyin-sandra-lu
 output:
   html_document:
-    theme: cerulean
+    theme: simplex

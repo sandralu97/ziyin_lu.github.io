@@ -4,8 +4,9 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
 ---
+
+<img src="image.jpg">
 
 ## About me
 

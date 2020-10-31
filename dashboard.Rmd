@@ -1,0 +1,50 @@
+---
+title: "Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, inlcude=FALSE}
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+library(flexdashboard)
+
+data("rest_inspec")
+```
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+rest = 
+  rest_inspec %>% 
+  janitor::clean_names() %>% 
+  select(boro, cuisine_description, dba, score, grade) %>% 
+  filter(
+    !is.na(grade)
+  )
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+
+```
+
+### Chart C
+
+```{r}
+
+```
+
+
+
