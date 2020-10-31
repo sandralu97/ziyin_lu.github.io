@@ -11,39 +11,94 @@ library(tidyverse)
 library(p8105.datasets)
 library(plotly)
 library(flexdashboard)
+library(ggplot2)
 
-data("rest_inspec")
+data("ny_noaa")
+
+noaa=
+  ny_noaa %>% 
+  janitor::clean_names() %>% 
+  separate(date,into = c("year","month","day"),remove = FALSE,convert = TRUE) %>% 
+mutate(
+  tmax = as.numeric(tmax),
+  tmin = as.numeric(tmin),
+  prcp = prcp/10,
+  tmax = tmax/10,
+  tmin = tmin/10
+)
+
 ```
 
 
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
+### Graph 1: max temperature vs. min temperature of NYC temperature on Nov.1 from 1981 to 2010 
 
 ```{r}
-rest = 
-  rest_inspec %>% 
-  janitor::clean_names() %>% 
-  select(boro, cuisine_description, dba, score, grade) %>% 
+  noaa %>% 
   filter(
-    !is.na(grade)
-  )
+    !is.na(tmin),
+    !is.na(tmax),
+    month == "11",
+    day=="1"
+  ) %>%
+  mutate(text_label = str_c("ID:",id, "\nYear:", year,"\nPrecipitation:",prcp)) %>% 
+plot_ly(x= ~tmin, y= ~tmax, type="scatter", mode="markers", color=~prcp,colors="viridis", text=~text_label)
+
 ```
 
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Graph 2: Distribution of max temperature 
 
 ```{r}
-
+noaa %>% 
+  mutate(
+    monthname = case_when(
+      month == 1 ~ "January",
+      month == 2 ~ "February",
+      month == 3 ~ "March",
+      month == 4 ~ "April",
+      month == 5 ~ "May",
+      month == 6 ~ "June",
+      month == 7 ~ "July",
+      month == 8 ~ "August",
+      month == 9 ~ "September",
+      month == 10 ~"October",
+      month == 11 ~"November",
+      month == 12 ~"December"
+    ),
+    monthname= fct_reorder(monthname,month)
+    ) %>% 
+  plot_ly(x= ~ monthname,y= ~ tmax,type = "box", color = ~monthname, colors="viridis")
 ```
 
-### Chart C
+### Mean precipitation (mm) of every month from 1981 to 2010
 
 ```{r}
-
+noaa %>% 
+  mutate(
+    monthname = case_when(
+      month == 1 ~ "January",
+      month == 2 ~ "February",
+      month == 3 ~ "March",
+      month == 4 ~ "April",
+      month == 5 ~ "May",
+      month == 6 ~ "June",
+      month == 7 ~ "July",
+      month == 8 ~ "August",
+      month == 9 ~ "September",
+      month == 10 ~"October",
+      month == 11 ~"November",
+      month == 12 ~"December"
+    ),
+    monthname= fct_reorder(monthname,month)
+    ) %>% 
+  group_by(monthname) %>% 
+  summarize(prcp_mean = mean(prcp,na.rm = TRUE)) %>% 
+  plot_ly(x = ~monthname, y=~prcp_mean,type="bar",color=~monthname, colors="viridis")
 ```
 
 

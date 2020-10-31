@@ -8,6 +8,9 @@ output:
 
 <img src="image.jpg">
 
+## Dashboard
+Check out the [dashboard](dashboard.html) of ny noaa data here!
+
 ## About me
 
 Check out [my resume](about.html) here!
