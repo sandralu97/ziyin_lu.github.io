@@ -15,4 +15,4 @@ navbar:
       href: https://www.linkedin.com/in/ziyin-sandra-lu
 output:
   html_document:
-    theme: simplex
+    theme: cerulean
